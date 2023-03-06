@@ -12,8 +12,9 @@ use App\Http\Resources\V1\UserResource;
 
 class UserController extends Controller
 {
-    public function users(Request $request)
+    public function get_users(Request $request)
     {
+
         $q=$request->query('q');
 
         if($q==null){

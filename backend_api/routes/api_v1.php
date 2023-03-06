@@ -19,8 +19,6 @@ use App\Http\Controllers\Api\V1\UserController;
 //     return $request->user();
 // });
 
-Route::get('/', function (Request $request) {
-    return '<h1 style="text-align: center; margin-top:20%;">welcome!</h1>';
-});
 
-Route::get('/users', [UserController::class, 'users']);
+
+Route::get('/', [UserController::class, 'get_users']);
