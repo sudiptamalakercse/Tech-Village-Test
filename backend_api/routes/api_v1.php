@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\V1\UserController;
+use App\Http\Controllers\Api\V1\ResultController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +24,4 @@ use App\Http\Controllers\Api\V1\UserController;
 
 
 Route::get('/', [UserController::class, 'get_users']);
+Route::get('/third_highest_mark_for_english', [ResultController::class, 'get_third_highest_mark_for_english']);
