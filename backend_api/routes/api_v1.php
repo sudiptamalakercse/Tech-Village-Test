@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\V1\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +20,7 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', function (Request $request) {
-    return '<h1 style="text-align: center; margin-top:20%;">You have to go to api_v1.php route file or http://127.0.0.1:8000/api/v1</h1>';
+    return '<h1 style="text-align: center; margin-top:20%;">welcome!</h1>';
 });
 
+Route::get('/users', [UserController::class, 'users']);
